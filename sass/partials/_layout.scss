@@ -1,0 +1,735 @@
+* { @include box-sizing(border-box); }
+
+label, input, textarea {
+	padding: 0.375em;
+}
+
+input, textarea {
+	border: 1px solid darken($yellow, 10%);
+}
+
+img {	max-width: 100%; }
+
+.btn {
+	@extend %yellow-button;
+	padding: 0.375em;
+}
+
+header {
+	border-bottom: 1px solid $gray;
+
+	.topbar {
+		background: $tan;
+		padding: 1em;
+		overflow: hidden;
+		@include borders(0, 0, 1px, 0);
+	}
+
+	#search_form {
+		float: left;
+		width: 70%;
+		@include clearfix;
+
+		#search_input {
+			float: left;
+			width: 55%;
+			margin-right: 0.5em;
+		}
+
+		#search_submit {
+			margin: 0;
+			width: auto;
+			@include adjust-font-size-to(14px);
+			@include adjust-leading-to(1);
+		}
+	}
+
+	.menu-link {
+		float: right;
+		@include adjust-font-size-to(14px);
+		@include adjust-leading-to(1);
+	}
+
+	.logo {
+		@include align-center;
+		@include leader(1);
+		@include trailer(1);
+		width: 40%;
+		max-width: 175px;
+	}
+}
+
+.content-block {
+	@include rhythm(0, 1, 1, 0);
+	@include borders(0, 0, 1px, 0);
+}
+
+.content-block, .lead-in {
+
+	h1, h2, h3, h4, h5, h6, p {
+		padding-left: $column-spacing * 2;
+		padding-right: $column-spacing * 2;
+	}
+}
+
+.intro {
+
+	.hero {
+		border-bottom: 1px solid $gray;
+	}
+}
+
+.main-head {
+	@include adjust-font-size-to(36px);
+}
+
+.recent {
+
+	.section-head {
+		@extend %divide;
+		@include borders(1px, 0, 1px, 0);
+	}
+}
+
+.recent-meta {
+	@include leader(1);
+
+ 	.title, .client {
+		@include avant_garde;
+		@include adjust-leading-to(1);
+		margin: 0;
+	}
+
+	.title {
+		@include adjust-font-size-to(20px);
+		text-transform: uppercase;
+		color: $purple;
+	}
+
+	.client {
+		color: $lgt_gold;
+	}
+
+	.port-link {
+		display: inline-block;
+		@include leader(1);
+		@include trailer(1);
+		@include adjust-font-size-to(14px);
+		@include adjust-leading-to(1);
+	}
+}
+
+.services {
+	padding-top: 0;
+
+	#hintText {
+		display: block;
+		@include adjust-font-size-to(14px);
+		@include rhythm(0, 0.25, 0.25, 0);
+		text-align: center;
+		@include avant_garde;
+		background: $yellow;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		overflow: hidden;
+
+		.icon-arrow-left {
+			float: left;
+			margin-left: $column-spacing;
+		}
+		.icon-arrow-right {
+			float: right;
+			margin-right: $column-spacing;
+		}
+	}
+
+	.flavor-image {
+		width: 100%;
+	}
+}
+
+#servicesListing {
+	display: none;
+}
+
+.portfolio-wrap {
+	margin: 0 $column-spacing*2;
+
+	.thumb {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		@include leader(1);
+		@include trailer(1);
+		outline: 1px solid $gray;
+		// @include borders(1px, 1px, 1px, 1px);
+
+		img {
+			display: block;
+			position: relative;
+			border: 4px solid #fff;
+		}
+
+		.caption {
+			width: 100%;
+			position: absolute;
+			padding: 0.5em;
+			bottom: -1.5em;
+			@include avant_garde;
+			@include adjust-font-size-to(14px);
+			@include adjust-leading-to(1);
+			background: transparentize(#fff, 0.5);
+			text-align: center;
+			text-transform: uppercase;
+
+			.categories {
+				text-transform: lowercase;
+				font-size: 0.85em;
+			}
+		}
+	}
+
+	.detail-view {
+		@include clearfix;
+		background: lighten($gray, 15%);
+		@include border-radius(4px);
+
+		.title {
+			color: $purple;
+			@include rhythm(0.5, 0, 0, 0);
+		}
+
+		.client {
+			@include rhythm(0, 0, 0, 0.5);
+			@include adjust-font-size-to(16px);
+			font-weight: normal;
+			text-transform: uppercase;
+		}
+
+		.description {
+			@include borders(0, 0, 1px, 0);
+			@include padding-trailer(1);
+		}
+
+		.category {
+			float: left;
+			@include rhythm(0.25, 0, 0, 0.25);
+			@include avant_garde;
+			@include adjust-font-size-to(14px);
+			color: darken($gray, 20%);
+			text-transform: lowercase;
+		}
+
+		.close-link {
+			display: block;
+			float: right;
+			@include adjust-font-size-to(16px);
+			@include adjust-leading-to(0.5);
+			padding: 0.5em;
+			margin-right: $column-spacing * 2;
+			@include trailer(1);
+			@extend %yellow-button;
+			i { margin-right: 0.5em; }
+		}
+
+	}
+
+}
+
+.contact {
+	background: $yellow;
+	@include box-shadow(inset 0 1px 5px 0 darken($yellow, 20%));
+
+	.section-head, .subhead {
+		color: darken($yellow, 45%);
+	}
+}
+
+#contact_form {
+	@include rhythm(0, 1, 1, 0);
+
+	.section-head {
+		@include rhythm(0.25, 0, 0, 0.25);
+	}
+
+	fieldset {
+    margin: 0;
+		padding: 1.5em;
+		border-top: 1px solid $lgt_gold;
+		border-bottom: 1px solid $lgt_gold;
+    background: lighten($yellow, 15%);
+
+	}
+
+	label, input, textarea {
+		clear: left;
+		float: left;
+		width: 100%;
+		@include rhythm(0.25, 0.125, 0.125, 0.25);
+	}
+
+	label {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	textarea {
+		height: 12em;
+		@include trailer(1);
+	}
+
+	input[type="submit"] {
+		padding: 0.375em;
+		@include adjust-font-size-to(18px);
+	}
+}
+
+.local-info {
+	@include rhythm(0, 1, 1, 0);
+
+	.subhead {
+		font-weight: normal;
+		@include rhythm(0.5, 0, 0, 0.5);
+		@include adjust-font-size-to(20px);
+		text-transform: uppercase;
+	}
+
+	.map {
+		width: 100%;
+		height: 19em;
+		@include trailer(1);
+		background: lighten($yellow, 10%);
+	}
+
+	.vcard {
+		@include adjust-font-size-to(14px);
+		@include adjust-leading-to(1);
+		@include avant_garde;
+		margin-left: $column-spacing * 2;
+		.org {
+			font-weight: bold;
+			color: darken($yellow, 45%);
+		}
+	}
+
+	.social-links {
+		@extend %neutral-list;
+		margin-left: $column-spacing * 2;
+
+		li {
+			display: inline-block;
+			margin-right: 0.5em;
+			text-transform: uppercase;
+			@include avant_garde;
+			@include adjust-font-size-to(13px);
+			font-weight: bold;
+			i {
+				@include adjust-font-size-to(15px);
+			}
+
+			a {
+				color: darken($yellow, 35%);
+			}
+		}
+	}
+}
+
+// .sub-nav {
+// 	overflow: hidden;
+// 	padding: 0 $column-spacing * 2;
+// 	width: 100%;
+
+// 	.head {
+// 		@extend %divide;
+// 		@include borders(1px, 1px, 0, 1px);
+// 		@include adjust-font-size-to(18px);
+// 		text-transform: uppercase;
+// 	}
+
+// 	.item {
+// 		padding: 1em;
+// 		@include adjust-font-size-to(14px);
+// 		@include adjust-leading-to(1);
+// 		@include avant_garde;
+// 		@include borders(1px, 1px, 0, 1px);
+// 		cursor: pointer;
+// 		&:last-child {
+// 			border-bottom: 1px solid $gray;
+// 		}
+// 	}
+// }
+
+#site-menu {
+	@include align-center;
+
+	ul {
+		@extend %neutral-list;
+		width: 100%;
+
+		li {
+			@include rhythm(0, 0.5, 0.5, 0);
+			@include adjust-font-size-to(16px);
+			padding-left: 1em;
+			background: darken($yellow, 10%);
+			border-bottom: 1px solid darken($yellow, 25%);
+			@include box-shadow(0 -2px 2px 0 darken($yellow, 15%), inset 0 1px 1px 0 lighten($yellow, 10%));
+			&:hover {
+				background: lighten($yellow, 10%);
+			}
+
+			a {
+				color: darken($yellow, 45%);
+				@include avant_garde;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+
+footer {
+	.copyright {
+		@include adjust-font-size-to(12px);
+		@include avant_garde;
+		margin: 0;
+		color: $gray;
+	}
+}
+
+@media only screen and (min-width: 31em) {
+
+.portfolio-wrap {
+@include clearfix;
+
+	.thumb {
+		float: left;
+		width: (100%/2) - ($column-spacing);
+		margin-right: $column-spacing*2;
+		&:nth-child(2n-1) {
+			margin-right: 0;
+		}
+	}
+}
+
+}
+
+@media only screen and (min-width: 40em) {
+
+.container {
+	@include align-center;
+	border-left: 1px solid $gray;
+	border-right: 1px solid $gray;
+	border-bottom: 1px solid $gray;
+	max-width: 1140px;
+}
+
+header {
+	@include padding-trailer(1);
+	overflow: hidden;
+	background: lighten($gold, 45%);
+
+	.topbar {
+		overflow: visible;
+		background: none;
+		border: none;
+		@include box-shadow(none);
+	}
+
+	#search_form {
+		@include leader(1);
+		float: right;
+		margin-right: $column-spacing/2;
+		width: 370px;
+		text-align: right;
+
+		#search_input {
+			width: 270px;
+		}
+
+		#search_submit {
+			width: 90px;
+		}
+
+	}
+
+	.logo {
+		margin: 0 0 0 $column-spacing;
+		float: left;
+		width: 140px;
+	}
+
+	.menu-link { display: none; }
+}
+
+.content-block, .lead-in {
+
+	h1, h2, h3, h4, h5, h6, p {
+		padding-left: $column-spacing;
+		padding-right: $column-spacing;
+	}
+}
+
+.content-block {
+	border-bottom: 1px solid $gray;
+}
+
+.intro {
+@include clearfix;
+
+	.hero {
+		@include column(7);
+		padding-bottom: 0;
+		border-bottom: none;
+	}
+
+	.lead-in {
+		@include column(5);
+	}
+}
+
+.recent {
+@include clearfix;
+
+	.section-head {
+		@include rhythm(0, 0.25, 0.25, 0);
+		padding-left: $column-spacing;
+		border-bottom: 1px solid $gray;
+		background: lighten($gold, 45%);
+	}
+
+
+	.recent-thumb {
+		@include column(7);
+	}
+
+	.recent-meta {
+		@include column(5);
+		@include rhythm(1, 0, 0, 1);
+	}
+}
+
+.services {
+	overflow: hidden;
+
+	#hintText {	display: none; }
+
+	.flavor-image {
+		margin-right: $column-spacing;
+		margin-left: $column-spacing;
+		@include leader(1);
+		@include trailer(1);
+		float: right;
+		width: 55%;
+		max-width: 450px;
+	}
+}
+
+#servicesListing {
+	display: inline-block;
+	width: auto;
+	@include trailer(1);
+}
+
+.portfolio-wrap {
+	margin-left: $column-spacing;
+	margin-right: $column-spacing;
+
+	.detail-view {
+		padding: $column-spacing;
+
+		.image {
+			display: block;
+			float: left;
+			margin: 0 ($column-spacing*2) ($column-spacing*2) 0;
+			width: 60%;
+		}
+
+		.title, .client, .description, .category { padding: 0; }
+
+		.description {
+			clear: left;
+			@include padding-trailer(0.5);
+			@include trailer(0.5);
+		}
+
+		.close-link {
+			margin-bottom: 0;
+			margin-right: 0;
+		}
+	}
+}
+
+.contact {
+	@include clearfix;
+}
+
+#contact_form {
+	@include column(6);
+
+	fieldset {
+		@include border-radius(4px);
+		border: 1px solid $lgt_gold;
+	}
+
+	label {
+		width: auto;
+		margin-right: 5%;
+	}
+
+	input {
+		clear: none;
+		float: right;
+		width: 65%;
+	}
+
+	input[type="submit"] {
+		width: auto;
+		@include adjust-font-size-to(15px);
+		padding: 0.25em 0.5em;
+	}
+
+}
+
+.local-info {
+	@include column(6);
+
+	.subhead {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.social-links {
+		margin-left: 0;
+	}
+
+	.vcard {
+		margin-left: 0;
+	}
+
+}
+
+.sub-nav {
+	margin-left: $column-spacing;
+	margin-right: $column-spacing;
+	padding: 0;
+	width: 100% - ($column-spacing * 2);
+	@include clearfix;
+
+	.head {
+		margin: 0;
+		padding-left: 0;
+		color: $gold;
+		text-transform: lowercase;
+		@include adjust-font-size-to(18px);
+		@include rhythm(0, 0.25, 0.25, 0);
+	}
+
+	.item-wrap {
+		@include clearfix;
+		border: 1px solid darken($yellow, 20%);
+		@include border-radius(4px);
+		@include box-shadow(1px 1px 2px darken($yellow, 35%));
+	}
+
+	.item {
+		float: left;
+		padding: 0.75em;
+		background: $yellow;
+		@include adjust-font-size-to(12px);
+		@include adjust-leading-to(0.85);
+		@include avant_garde;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: darken($yellow, 45%);
+		border-right: 1px solid darken($yellow, 25%);
+		@include box-shadow(inset 1px 1px 0 lighten($yellow, 10%));
+		cursor: pointer;
+		&:last-child { border-right: none; }
+		&:hover {
+			background: lighten($yellow, 15%);
+		}
+		}
+	}
+
+#site-menu {
+	position: absolute;
+	top: 7.5em;
+	right: $column-spacing;
+
+	ul {
+		display: block;
+
+		li {
+			float: left;
+			padding: 0.25em 0.5em;
+			border-right: 1px solid darken($yellow, 25%);
+			&:first-child {
+				padding-left: 0.5em;
+				border-left: 1px solid darken($yellow, 25%);
+				@include border-radius(4px 0 0 4px);
+			}
+			&:last-child {
+				padding-right: 0.5em;
+				@include border-radius(0 4px 4px 0);
+			}
+		}
+	}
+}
+
+footer {
+	clear: both;
+	@include rhythm(0, 0.5, 0.5, 0);
+	padding-left: $column-spacing;
+	padding-right: $column-spacing;
+
+	.copyright { padding: 0; }
+}
+
+}
+
+@media only screen and (min-width: 46em) {
+
+.portfolio-wrap {
+	.detail-view {
+		.image {
+			float: left;
+			margin: 0 $column-spacing $column-spacing 0;
+			width: 50%;
+		}
+	}
+}
+
+}
+
+@media only screen and (min-width: 54.6875em) {
+
+.portfolio-wrap {
+@include clearfix;
+
+	.thumb {
+		float: left;
+		width: (100%/3) - ($column-spacing * 2);
+		margin-right: $column-spacing;
+		&:nth-child(2n-1) {
+			margin-right: $column-spacing;
+		};
+		&:nth-child(3n-2) {
+			margin-right: 0;
+		}
+	}
+
+	.detail-view {
+		width: (100%) - ($column-spacing * 4);
+		.description {
+			clear: none;
+			border: none;
+		}
+
+		.category {
+			clear: left;
+		}
+	}
+}
+
+}

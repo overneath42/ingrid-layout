@@ -1,0 +1,65 @@
+$column-width: 60px;
+$gutter-width: 40px;
+$columns: 12;
+$total-width: 100%;
+
+$column-spacing: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+
+$base-font-size: 10px;
+$base-line-height: 14px;
+@include establish-baseline;
+
+$purple: #1a2574;
+$gold: #8c745a;
+$yellow: invert($purple);
+$lgt_purple: lighten($purple, 60%);
+$lgt_gold: lighten($gold, 20%);
+$tan: lighten($gold, 45%);
+$gray: #bbb;
+
+@mixin avant_garde_xlt { font-family: 'itc_avant_garde_std_xltRg', "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif; }
+@mixin avant_garde { font-family: 'itc_avant_garde_std', "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif; }
+@mixin avant_garde_cn { font-family: 'ITCAvantGardeStd-Cn', "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif; }
+@mixin palatino { font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; }
+@mixin baskerville { font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif; }
+@mixin garamond { font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif; }
+
+@mixin align-center {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+}
+
+@mixin borders($top, $right, $bottom, $left) {
+  @if $top > 0 { border-top: $top solid $gray; }
+  @if $right > 0 { border-right: $right solid $gray; }
+  @if $bottom > 0 { border-bottom: $bottom solid $gray; }
+  @if $left > 0 { border-left: $left solid $gray; }
+}
+
+%divide {
+  @include rhythm(0, 0.25, 0.25, 0);
+  background: $tan;
+}
+
+%neutral-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+%yellow-button {
+	@include background-image(linear-gradient($yellow, darken($yellow, 20%)));
+  @include border-radius(4px);
+  border: 1px solid darken($yellow, 20%);
+  @include avant_garde;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: darken($yellow, 45%);
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 0 lighten($yellow, 5%);
+  @include box-shadow(inset 1px 1px 1px lighten($yellow, 10%), 1px 1px 2px darken($yellow, 35%));
+  &:hover {
+    @include background-image(linear-gradient(lighten($yellow, 10%), $yellow));
+  }
+}
