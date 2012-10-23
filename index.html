@@ -9,6 +9,7 @@
   <title>InGrid Design - Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="css/style.css"  rel="stylesheet" media="screen, projection" type="text/css">
+  <link href="css/flexslider/flexslider.css"  rel="stylesheet" media="screen, projection" type="text/css">
 </head>
 <body>
   <div class="container">
@@ -20,10 +21,10 @@
         </form>
         <a href="#site-menu" class="menu-link btn">Site Menu</a>
       </div>
-      <img src="img/igd_logo.png" alt="FPO logo" class="logo">
+      <a href="index.html"><img src="img/igd_logo.png" alt="FPO logo" class="logo"></a>
     </header>
     <section class="intro">
-      <img src="http://placehold.it/800x600" alt="FPO intro" class="hero">
+      <!-- <img src="http://placehold.it/800x600" alt="FPO intro" class="hero"> -->
       <div class="lead-in">
         <h1 class="main-head">makers of highly appealing creative.</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exa commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore euugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseruntollit anim id est laborum.</p>
@@ -31,11 +32,34 @@
     </section>
     <section class="content-block recent">
       <h1 class="section-head">recent work</h1>
-      <img src="http://placehold.it/500x250" alt="FPO recent work" class="recent-thumb">
-      <div class="recent-meta">
-        <p class="title">Title of Work</p>
-        <p class="client">Name of Client</p>
-        <a href="#" class="port-link btn">See our full portfolio</a>
+      <div id="hintText"><i class="icon-arrow-left"></i>Swipe left or right for samples<i class="icon-arrow-right"></i></div>
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img src="http://placehold.it/500x250" alt="FPO recent work" class="recent-thumb">
+            <div class="recent-meta">
+              <p class="title">Title of Work</p>
+              <p class="client">Name of Client</p>
+              <a href="#" class="port-link btn">See our full portfolio</a>
+            </div>
+          </li>
+          <li>
+            <img src="http://placehold.it/500x250" alt="FPO recent work" class="recent-thumb">
+            <div class="recent-meta">
+              <p class="title">Title of Work</p>
+              <p class="client">Name of Client</p>
+              <a href="#" class="port-link btn">See our full portfolio</a>
+            </div>
+          </li>
+          <li>
+            <img src="http://placehold.it/500x250" alt="FPO recent work" class="recent-thumb">
+            <div class="recent-meta">
+              <p class="title">Title of Work</p>
+              <p class="client">Name of Client</p>
+              <a href="#" class="port-link btn">See our full portfolio</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="content-block contact">
@@ -73,8 +97,8 @@
     </section>
     <nav id="site-menu">
       <ul>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="#">Clients</a></li>
         <li><a href="#">The Team</a></li>
       </ul>
@@ -83,5 +107,17 @@
       <p class="copyright">All content &copy; 2012 InGrid Design</p>
     </footer>
   </div>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="js/libs/jquery.flexslider-min.js"></script>
+  <script type="text/javascript">
+      $(window).load(function() {
+        $('.flexslider').flexslider({
+          slideshow: false,
+          animation: "slide",
+          animationSpeed: 500,
+          controlNav: false
+        });
+      });
+    </script>
 </body>
 </html>

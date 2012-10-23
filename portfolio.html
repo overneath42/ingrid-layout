@@ -20,52 +20,59 @@
         </form>
         <a href="#site-menu" class="menu-link btn">Site Menu</a>
       </div>
-      <img src="img/igd_logo.png" alt="FPO logo" class="logo">
+      <a href="index.html"><img src="img/igd_logo.png" alt="FPO logo" class="logo"></a>
     </header>
 
     <section class="content-block">
     	<h1 class="main-head">insert headline here eventually</h1>
     	<p class="subhead">Use the menu below to filter by category. Click an individual item to learn more.</p>
-      <div class="portfolio-wrap">
-        <div class="detail-view">
-          <img src="http://placehold.it/800x500" class="image">
-          <h2 class="title">Menu of Services</h2>
-          <h3 class="client">Calospa, M.D.</h3>
-          <p class="description">Ut organic pariatur photo booth, sustainable +1 authentic letterpress leggings marfa. Kogi chambray sriracha helvetica, aute dreamcatcher butcher retro minim delectus bushwick nostrud. Bushwick VHS pork belly stumptown. Pinterest before they sold out single-origin coffee wes anderson proident truffaut sed ut, nisi wolf ethnic bespoke.</p>
+    </section>
+    <section class="content-block" id="portfolioFilterMenu"></section>
+    <section class="content-block">
+      <div class="detail-view">
+        <img src="http://placekitten.com/800/550" class="image">
+        <div class="info">
+          <h2 class="title">Title of Piece</h2>
+          <h3 class="client">Name of Client</h3>
+          <p class="description">Ut organic pariatur photo booth, sustainable +1 authentic letterpress leggings marfa. Kogi chambray sriracha helvetica, aute dreamcatcher butcher retro minim delectus bushwick nostrud. Bushwick VHS pork belly stumptown. Ut organic pariatur photo booth, sustainable +1 authentic letterpress leggings marfa.</p>
+        </div>
+        <div class="meta">
           <p class="category">Category</p>
-          <a href="#" class="close-link"><i class="icon-remove"></i>Close</a>
+          <a href="#" class="close-link" id="closeDetailView"><i class="icon-remove"></i>Close</a>
         </div>
-        <div class="thumb">
-          <img src="http://placehold.it/600x300">
-          <div class="caption">Title of Piece<br><span class="categories">Categories</span></div>
+      </div>
+      <div class="portfolio-wrap">
+        <div class="thumb print-design">
+          <img src="http://placehold.it/600x350">
+          <div class="caption">Brochure<br><span class="categories">Print Design</span></div>
         </div>
-        <div class="thumb">
-          <img src="http://placehold.it/600x300">
-          <div class="caption">Title of Piece<br><span class="categories">Categories</span></div>
+        <div class="thumb interactive">
+          <img src="http://placehold.it/600x350">
+          <div class="caption">Website<br><span class="categories">Interactive Design</span></div>
         </div>
-        <div class="thumb">
-          <img src="http://placehold.it/600x300">
-          <div class="caption">Title of Piece<br><span class="categories">Categories</span></div>
+        <div class="thumb branding">
+          <img src="http://placehold.it/600x350">
+          <div class="caption">Logo<br><span class="categories">Brand Development</span></div>
         </div>
-        <div class="thumb">
-          <img src="http://placehold.it/600x300">
-          <div class="caption">Title of Piece<br><span class="categories">Categories</span></div>
+        <div class="thumb advertising">
+          <img src="http://placehold.it/600x350">
+          <div class="caption">Ad Campaign<br><span class="categories">Advertising</span></div>
         </div>
-        <div class="thumb">
-          <img src="http://placehold.it/600x300">
-          <div class="caption">Title of Piece<br><span class="categories">Categories</span></div>
+        <div class="thumb print-design">
+          <img src="http://placehold.it/600x350">
+          <div class="caption">Brochure<br><span class="categories">Print Design</span></div>
         </div>
-        <div class="thumb">
-          <img src="http://placehold.it/600x300">
-          <div class="caption">Title of Piece<br><span class="categories">Categories</span></div>
+        <div class="thumb interactive">
+          <img src="http://placehold.it/600x350">
+          <div class="caption">Website<br><span class="categories">Interactive Design</span></div>
         </div>
-        <div class="thumb">
-          <img src="http://placehold.it/600x300">
-          <div class="caption">Title of Piece<br><span class="categories">Categories</span></div>
+        <div class="thumb branding">
+          <img src="http://placehold.it/600x350">
+          <div class="caption">Logo<br><span class="categories">Brand Development</span></div>
         </div>
-        <div class="thumb">
-          <img src="http://placehold.it/600x300">
-          <div class="caption">Title of Piece<br><span class="categories">Categories</span></div>
+        <div class="thumb print-design">
+          <img src="http://placehold.it/600x350">
+          <div class="caption">Postcard<br><span class="categories">Print Design</span></div>
         </div>
       </div>
     </section>
@@ -105,8 +112,8 @@
 
     <nav id="site-menu">
       <ul>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="#">Clients</a></li>
         <li><a href="#">The Team</a></li>
       </ul>
@@ -115,5 +122,9 @@
       <p class="copyright">All content &copy; 2012 InGrid Design</p>
     </footer>
 		</div>
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="js/libs/jquery.isotope.min.js"></script>
+    <script src="js/libs/jquery.customselect.js"></script>
+    <script src="js/scripts.js"></script>
 	</body>
 </html>

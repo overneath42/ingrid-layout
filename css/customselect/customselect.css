@@ -1,0 +1,53 @@
+/* line 2, ../../sass/customselect/customselect.scss */
+.custom-select-container {
+  position: relative;
+}
+
+/* line 5, ../../sass/customselect/customselect.scss */
+select.replaced {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 30px;
+  border: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  line-height: 2;
+}
+
+/* line 16, ../../sass/customselect/customselect.scss */
+.custom-select {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 24, ../../sass/customselect/customselect.scss */
+.custom-select > span {
+  display: block;
+  position: relative;
+  font-weight: bold;
+}
+
+/* line 30, ../../sass/customselect/customselect.scss */
+.custom-select span span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 35, ../../sass/customselect/customselect.scss */
+.custom-select span span:after {
+  content: "\25BC";
+  position: absolute;
+}
+
+/* line 42, ../../sass/customselect/customselect.scss */
+.custom-select.active > span {
+  border-color: #666;
+  background-position: bottom right;
+}

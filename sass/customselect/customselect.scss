@@ -1,0 +1,45 @@
+// Wrapper element to enable positioning
+.custom-select-container { position:relative; }
+
+// Set the dimensions of the replaced select element and make it transparent.
+select.replaced {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	height: 30px;
+	border: 0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	line-height: 2;
+}
+.custom-select {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.custom-select > span {
+	display: block;
+	position: relative;
+	font-weight: bold;
+}
+
+.custom-select span span {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	&:after {
+		content: "\25BC";
+		position: absolute;
+	}
+}
+
+
+.custom-select.active > span {
+	border-color: #666;
+	background-position: bottom right;
+}
